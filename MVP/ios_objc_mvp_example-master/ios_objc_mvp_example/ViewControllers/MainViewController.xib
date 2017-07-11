@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="decrementButton" destination="vog-pH-xph" id="Yqp-ws-sz7"/>
+                <outlet property="incrementButton" destination="X8d-6P-p2m" id="YuT-b5-77Z"/>
+                <outlet property="valueLabel" destination="JKe-or-BDE" id="Ajm-6b-I2H"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8d-6P-p2m">
+                    <rect key="frame" x="153" y="248.5" width="69" height="30"/>
+                    <state key="normal" title="Increment"/>
+                    <connections>
+                        <action selector="incrementEvent:" destination="-1" eventType="touchUpInside" id="rnR-cw-6HX"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKe-or-BDE">
+                    <rect key="frame" x="20" y="318.5" width="335" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="wOg-mE-oDg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vog-pH-xph">
+                    <rect key="frame" x="149.5" y="388.5" width="76" height="30"/>
+                    <state key="normal" title="Decrement"/>
+                    <connections>
+                        <action selector="decrementEvent:" destination="-1" eventType="touchUpInside" id="DIP-2L-O50"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vog-pH-xph" firstAttribute="top" secondItem="JKe-or-BDE" secondAttribute="bottom" constant="40" id="8HA-P1-Zp3"/>
+                <constraint firstItem="JKe-or-BDE" firstAttribute="top" secondItem="X8d-6P-p2m" secondAttribute="bottom" constant="40" id="LK9-Qg-zu8"/>
+                <constraint firstAttribute="trailing" secondItem="JKe-or-BDE" secondAttribute="trailing" constant="20" id="O5U-Pz-EuF"/>
+                <constraint firstItem="JKe-or-BDE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UFY-CJ-qqh"/>
+                <constraint firstItem="vog-pH-xph" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dpd-oF-PxV"/>
+                <constraint firstItem="JKe-or-BDE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="f6N-sx-5MA"/>
+                <constraint firstItem="X8d-6P-p2m" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qXg-Pq-zOf"/>
+            </constraints>
+            <point key="canvasLocation" x="365" y="383"/>
+        </view>
+    </objects>
+</document>
